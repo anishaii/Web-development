@@ -39,7 +39,7 @@ const Signup = () => {
         },
         body: JSON.stringify({
           name: formData.name,
-          username: formData.username,  // <-- Corrected here
+          username: formData.username,  
           email: formData.email,
           phone: formData.phone,
           password: formData.password,
