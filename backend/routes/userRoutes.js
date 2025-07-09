@@ -6,7 +6,7 @@ const{
 
 const router = express.Router();
 
-router.get("/users",getAllEmployee);
-router.post("/users", saveAllEmployee);
+router.get("/",getAllEmployee);
+router.post("/", saveAllEmployee);
 
 module.exports = {router};

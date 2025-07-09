@@ -1,22 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {useNavigate} from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { assets } from '../assets/assets'
 import './Home.css'
 
 const Home = () => {
-    const navigate = useNavigate();
+  const [menu,setMenu] = useState("home");
+  const navigate = useNavigate();
   return (
     <div>
         <div className='navbar'>
       <img src={assets.final_logo} alt="" className='logo' />
-      <ul className='navbar-menu'>
-            <li>Home</li>
-            <li>Outlets</li>
-            <li>Offfer</li>
-            <li>Contact us</li>
+   <ul className='navbar-menu'>
+    <li onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>Home</li>
+    <li onClick={() => setMenu("outlet")} className={menu === "outlet" ? "active" : ""}>Outlets</li>
+    <li onClick={() => setMenu("offer")} className={menu === "offer" ? "active" : ""}>Offer</li>
+    <li onClick={() => setMenu("contact")} className={menu === "contact" ? "active" : ""}>Contact us</li>
+  </ul>
 
-        </ul>
       <div className='navbar-right'>
         <img src={assets.search_icon} alt="" />
             <div className='nav-search-icon'>

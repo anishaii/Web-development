@@ -1,70 +1,43 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { assets } from '../assets/assets';
 import './Signup.css';
-import { Link } from 'react-router-dom';
-
 const Signup = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    username: '',
-    email: '',
-    phone: '',
-    password: '',
-    confirmPassword: '',
-    gender: ''
-  });
+  const {
+    register,
+    handleSubmit,
+    watch,
+    reset,
+    formState: { errors }
+} = useForm();
 
-  const handleChange = (e) => {
-    const { name, value, type } = e.target;
-
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (formData.password !== formData.confirmPassword) {
+  const onSubmit = async (data) => {
+    if (data.password !== data.confirmPassword) {
       alert("Passwords do not match.");
       return;
     }
 
     try {
-      const res = await fetch("http://localhost:5000/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          username: formData.username,  
-          email: formData.email,
-          phone: formData.phone,
-          password: formData.password,
-          gender: formData.gender
-        })
-      });
+      const res = await axios.post("http://localhost:5000/api/auth/register", {
+        name: data.name,
+        userId: data.userId,
+        email: data.email,
+        phone: data.phone,
+        password: data.password,
+        gender: data.gender,
+     });
 
-      const data = await res.json();
       if (res.status === 201) {
         alert("Registration successful!");
-        setFormData({
-          name: '',
-          username: '',
-          email: '',
-          phone: '',
-          password: '',
-          confirmPassword: '',
-          gender: ''
-        });
+        reset(); // clear form
       } else {
-        alert(data.message || "Something went wrong!");
+        alert(res.data.message || "Something went wrong!");
       }
     } catch (err) {
       console.error("Error:", err);
-      alert("Server error!");
+      alert(err.response?.data?.message || "Server error!");
     }
   };
 
@@ -83,72 +56,50 @@ const Signup = () => {
       <div className="container1">
         <div className="form-box1">
           <h2>Registration</h2>
-          <form className='form1' onSubmit={handleSubmit}>
+          <form className='form1' onSubmit={handleSubmit(onSubmit)}>
             <div className="form-fields1">
               <div className="form-group1">
                 <label>Full Name</label>
                 <input
                   type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
+                  {...register("name", { required: true })}
                   placeholder="Enter your name"
-                  required
                 />
               </div>
-              <div className="form-group1">
-                <label>Username</label>
-                <input
-                  type="text"
-                  name="username"
-                  value={formData.username}
-                  onChange={handleChange}
-                  placeholder="Enter your username"
-                  required
-                />
-              </div>
+
               <div className="form-group1">
                 <label>Email</label>
                 <input
                   type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
+                  {...register("email", { required: true })}
                   placeholder="Enter your email"
-                  required
                 />
               </div>
+
               <div className="form-group1">
                 <label>Phone Number</label>
                 <input
                   type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
+                  {...register("phone", { required: true })}
                   placeholder="Enter your number"
-                  required
                 />
               </div>
+
               <div className="form-group1">
                 <label>Password</label>
                 <input
                   type="password"
-                  name="password"
-                  value={formData.password}
-                  onChange={handleChange}
+                  {...register("password", { required: true })}
                   placeholder="Enter your password"
-                  required
                 />
               </div>
+
               <div className="form-group1">
                 <label>Confirm Password</label>
                 <input
                   type="password"
-                  name="confirmPassword"
-                  value={formData.confirmPassword}
-                  onChange={handleChange}
+                  {...register("confirmPassword", { required: true })}
                   placeholder="Confirm your password"
-                  required
                 />
               </div>
             </div>
@@ -158,28 +109,22 @@ const Signup = () => {
               <label>
                 <input
                   type="radio"
-                  name="gender"
                   value="Male"
-                  checked={formData.gender === "Male"}
-                  onChange={handleChange}
+                  {...register("gender", { required: true })}
                 /> Male
               </label>
               <label>
                 <input
                   type="radio"
-                  name="gender"
                   value="Female"
-                  checked={formData.gender === "Female"}
-                  onChange={handleChange}
+                  {...register("gender", { required: true })}
                 /> Female
               </label>
               <label>
                 <input
                   type="radio"
-                  name="gender"
                   value="Other"
-                  checked={formData.gender === "Other"}
-                  onChange={handleChange}
+                  {...register("gender", { required: true })}
                 /> Other
               </label>
             </div>

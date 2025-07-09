@@ -1,0 +1,41 @@
+.dash{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo{
+    width: 180px;
+}
+
+   .search-box {
+      flex-grow: 1;
+      margin: 0 20px;
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .signup-btn{
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid rgb(102, 195, 92);
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    }
+
+    .signup-btn:hover{
+    background-color: #e9f0e3;
+}
