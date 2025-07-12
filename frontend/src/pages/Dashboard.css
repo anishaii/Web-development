@@ -39,3 +39,100 @@
     .signup-btn:hover{
     background-color: #e9f0e3;
 }
+.sidebar {
+      position: fixed;
+      top: 104px;
+      left: 0;
+      width: 80px;
+      background: white;
+      height: 100%;
+      padding-top: 30px;
+      box-shadow: 1px 0 4px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .sidebar img {
+      width: 25px;
+      height:25px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+        .sidebar img:hover {
+      transform: scale(1.1);
+    }
+    .main-content {
+      margin-left: 80px;
+      padding: 40px 30px;
+    }
+
+    .main-content h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    .product-card {
+      background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .product-details {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 14px 18px;
+      font-size: 15px;
+    }
+
+    .name {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .price {
+      font-weight: 500;
+      color: #2e5b4f;
+    }
+
+    .strikethrough {
+      text-decoration: line-through;
+      color: #888;
+    }
+
+    .badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #4caf50;
+      color: white;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .badge.green {
+      background: #36743b;
+      height:30px;
+      width: 110px;
+    }
+
+    .product-card {
+      position: relative;
+    }

@@ -26,6 +26,93 @@ const Dashboard = () => {
       <button onClick={logoutHandler}>Logout</button>
     </div>
   </header>
+  <aside class="sidebar">
+    <img src={assets.menu}  />
+    <img src={assets.home} />
+    <img src={assets.basket} />
+    <img src={assets.heart} />
+    <img src={assets.care} />
+  </aside>
+    <main className="main-content">
+        <section>
+      <h2>Best Seller</h2>
+      <div className="product-grid">
+        <div className="product-card">
+          <span className="badge">BESTSELLER</span>
+          <img src={assets.neon}/>
+          <div className="product-details">
+            <span className="name">Neon Prayer Plant</span>
+            <span className="price">$69 - $89</span>
+          </div>
+        </div>
+
+        <div className="product-card">
+          <span className="badge">BESTSELLER</span>
+          <img src={assets.orchid}/>
+          <div className="product-details">
+            <span className="name">Mini Money Tree</span>
+            <span className="price">$49</span>
+          </div>
+        </div>
+
+        <div className="product-card">
+          <span className="badge green">NEW</span>
+          <img src={assets.spider}/>
+          <div className="product-details">
+            <span className="name">Spider Plant</span>
+            <span className="price">$69 - $89</span>
+          </div>
+        </div>
+
+        <div className="product-card">
+          <img src={assets.palm}/>
+          <div className="product-details">
+            <span className="name">Cat Palm</span>
+            <span className="price">$169 - $199</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>New Arrivals</h2>
+      <div className="product-grid">
+        <div className="product-card">
+          <span className="badge green">SUMMER EXCLUSIVE</span>
+          <img src={assets.pineapple} />
+          <div className="product-details">
+            <span className="name">Bromeliad Pineapple</span>
+            <span className="price">$79</span>
+          </div>
+        </div>
+
+        <div className="product-card">
+          <img src={assets.money_tree}/>
+          <div className="product-details">
+            <span className="name">Money Tree</span>
+            <span className="price">$169 - $199</span>
+          </div>
+        </div>
+
+        <div className="product-card">
+          <img src={assets.mosntera}/>
+          <div className="product-details">
+            <span className="name">Monstera Deliciosa</span>
+            <span className="price">$99</span>
+          </div>
+        </div>
+
+        <div className="product-card">
+          <img src={assets.succulents}/>
+          <div className="product-details">
+            <span className="name">Tough Stuff Collection</span>
+            <span className="price"><span className="strikethrough">$117</span> $79</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
     </div>
   )
 }

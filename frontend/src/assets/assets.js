@@ -8,6 +8,21 @@ import service_icon from './service_icon.png'
 import plant_icon from './plant_icon.png'
 import payment_icon from './payment_icon.png'
 import gift_icon from './gift_icon.png'
+import basket from './basket.png'
+import heart from './heart.png'
+import home from './home.png'
+import menu from './menu.png'
+import care from './care.png'
+import pineapple from './pineapple.jpg'
+import succulents from './succulents.jpg'
+import spider from './spider.jpg'
+import palm from './palm.jpg'
+import orchid from './orchid.png'
+import mosntera from './mosntera.jpg'
+import money_tree from './money_tree.jpg'
+import neon from './neon.png'
+
+
 
 
 export const assets ={
@@ -20,6 +35,11 @@ export const assets ={
     plant_icon,
     service_icon,
     payment_icon,
-    gift_icon
+    gift_icon,
+    basket,
+    heart,
+    menu,
+    care,
+    home,pineapple,succulents,neon,spider,orchid,palm,money_tree,money_tree,mosntera
 
 }
