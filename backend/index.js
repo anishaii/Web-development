@@ -5,11 +5,16 @@ const { connection } = require("./Database/db");
 const { router: userRouter } = require("./routes/userRoutes");
 const { authRouter } = require("./routes/authRoutes"); 
 const { authenticateToken } = require("./middleware/token-middleware");
+const uploadRouter = require("./routes/uploadRoutes");
+const { createUploadsFolder } = require("./security/helper");
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+// Create uploads folder at startup
+createUploadsFolder();
 
 app.use(cors({
   origin: "http://localhost:5173",
@@ -18,12 +23,19 @@ app.use(cors({
 
 app.use(express.json());
 
-// ✅ Apply token middleware globally (after login still works)
-app.use(authenticateToken);
+
+
+
+// ✅ Serve uploaded files statically
+app.use("/uploads", express.static("uploads"));
+
+// ✅ Protected routes
+app.use("/api/users", authenticateToken, userRouter); // 🔐 Only protect sensitive routes
 
 // ✅ Routes
-app.use("/api/users", userRouter);
-app.use("/api/auth", authRouter);        
+
+app.use("/api/auth", authRouter); 
+app.use("/api/file", uploadRouter);       
 // ✅ Connect to DB
 connection();
 
