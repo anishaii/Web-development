@@ -29,39 +29,39 @@ const Home = () => {
       </div>
     </div>
      <section className='main-img'>
-        <img src={assets.plant} alt="" class="background-img"/>
-         <div class="top-leftText">
-           <h1>Delicious Food Delivered To Your <span class="door">Door</span> <span class="step">Step</span></h1>
+        <img src={assets.plant} alt="" className="background-img"/>
+         <div className="top-leftText">
+           <h1>Delicious Food Delivered To Your <span class="door">Door</span> <span className="step">Step</span></h1>
           </div>
 
-           <div class="top-leftText2">
+           <div className="top-leftText2">
             <p>"Order food from your favorite restaurants and track your delivery in real-time.Quick, easy, and delicious!"</p>
           </div>
 
           <button className='shop-now'><Link to ={"/dashboard"}>Shop now</Link></button>
       </section>
-      <section class="categories-section">
+      <section className="categories-section">
       <h3>Explore Categories</h3>
       <p>Discover food from your favorite cuisines</p>
 
-      <div class="categories">
-        <div class="category-card">
+      <div className="categories">
+        <div className="category-card">
           <img src={assets.delivery_icon} />
           <span>Fast Delivery</span>
         </div>
-        <div class="category-card">
+        <div className="category-card">
           <img src={assets.service_icon} />
           <span>24/7 Support</span>
         </div>
-        <div class="category-card">
+        <div className="category-card">
           <img src={assets.plant_icon}/>
           <span>Plant care</span>
         </div>
-        <div class="category-card">
+        <div className="category-card">
           <img src={assets.payment_icon} />
           <span>Secure Payment</span>
         </div>
-        <div class="category-card">
+        <div className="category-card">
           <img src={assets.gift_icon} />
           <span>More</span>
         </div>

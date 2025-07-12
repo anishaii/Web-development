@@ -24,9 +24,10 @@ const App = () => {
       <Route
         path="/signup"
         element={
-         
-            <Signup />
-          
+            <ProtectedRoute requireAuth={false}>
+               <Signup />
+
+            </ProtectedRoute>
         }
       />
       <Route
