@@ -21,6 +21,10 @@ import orchid from './orchid.png'
 import mosntera from './mosntera.jpg'
 import money_tree from './money_tree.jpg'
 import neon from './neon.png'
+import back from './back.jpg'
+import sunlight from './sunlight.jpg'
+import WAtering from './WAtering.jpg'
+import unpackingg from './unpackingg.jpg'
 
 
 
@@ -40,6 +44,7 @@ export const assets ={
     heart,
     menu,
     care,
-    home,pineapple,succulents,neon,spider,orchid,palm,money_tree,money_tree,mosntera
+    home,pineapple,succulents,neon,spider,orchid,palm,money_tree,money_tree,mosntera,
+    back,unpackingg,sunlight,WAtering
 
 }

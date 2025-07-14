@@ -4,7 +4,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
-import ProtectedRoute from "./components/protectedRoute";
+import ProtectedRoute from "./components/ProtectedRoute";
+import PlantCare from "./pages/plantCare";
 
 const App = () => {
   const isAuthenticated = localStorage.getItem("token");
@@ -38,7 +39,13 @@ const App = () => {
           </ProtectedRoute>
         }
       />
+
+      <Route path="plantcare" element={< PlantCare/>}/>
+
+   
+
     </Routes>
+
   );
 };
 
