@@ -31,7 +31,7 @@ const Dashboard = () => {
     <img src={assets.home} />
     <img src={assets.basket} />
     <img src={assets.heart} />
-    <img src={assets.care} />
+    <img src={assets.care}  onClick={() => navigation('/plantcare')}  />
   </aside>
     <main className="main-content">
         <section>
