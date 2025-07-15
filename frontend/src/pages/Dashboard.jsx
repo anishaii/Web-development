@@ -86,7 +86,7 @@ const Dashboard = () => {
         </div>
 
         <div className="product-card">
-          <img src={assets.money_tree}/>
+          <img src={assets.money_tree } onClick={() => navigation('/moneyplant')}/>
           <div className="product-details">
             <span className="name">Money Tree</span>
             <span className="price">$169 - $199</span>
