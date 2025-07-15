@@ -25,6 +25,9 @@ import back from './back.jpg'
 import sunlight from './sunlight.jpg'
 import WAtering from './WAtering.jpg'
 import unpackingg from './unpackingg.jpg'
+import mtree from './mtree.jpg'
+import delivery from './delivery.png'
+import high_quality from './high_quality.png'
 
 
 
@@ -45,6 +48,6 @@ export const assets ={
     menu,
     care,
     home,pineapple,succulents,neon,spider,orchid,palm,money_tree,money_tree,mosntera,
-    back,unpackingg,sunlight,WAtering
+    back,unpackingg,sunlight,WAtering,mtree,delivery,high_quality
 
 }

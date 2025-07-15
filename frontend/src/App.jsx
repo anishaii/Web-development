@@ -6,6 +6,7 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PlantCare from "./pages/plantCare";
+import MoneyPlant from "./pages/Detail/MoneyPlant";
 
 const App = () => {
   const isAuthenticated = localStorage.getItem("token");
@@ -41,6 +42,7 @@ const App = () => {
       />
 
       <Route path="plantcare" element={< PlantCare/>}/>
+      <Route path="moneyplant" element={< MoneyPlant/>}/>
 
    
 

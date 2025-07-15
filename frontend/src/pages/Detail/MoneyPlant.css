@@ -1,0 +1,122 @@
+.money-container {
+  display: flex;
+}
+
+.money-side {
+  width: 60px;
+  background-color: white;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.money-icon {
+  width: 24px;
+  cursor: pointer;
+}
+
+.money-main {
+  flex: 1;
+  padding: 40px;
+}
+
+.money-top {
+  display: flex;
+  gap: 40px;
+}
+
+.money-image-box .money-plant-img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.money-details {
+  flex: 1;
+}
+
+.money-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.money-desc {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.money-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.money-add-btn {
+  background-color: #bfe2c0;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.money-shipping {
+  display: flex;
+  gap: 40px;
+}
+
+.money-info-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.money-info-box img {
+  width: 30px;
+  height: 30px;
+}
+
+.money-info-box p span {
+  display: block;
+  font-size: 12px;
+  color: #666;
+}
+
+.money-bottom {
+  display: flex;
+  margin-top: 40px;
+  gap: 10px;
+}
+
+.money-benefits {
+  flex: 1;
+  background-color: #f4e9e2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.money-benefits h2 {
+  margin-bottom: 15px;
+}
+
+.money-benefits h3 {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.money-benefits ul {
+  margin-top: 10px;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.money-close-up-img img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
