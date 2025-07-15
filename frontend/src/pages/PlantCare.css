@@ -1,17 +1,19 @@
 .bar {
   position: fixed;
-
+  top: 0; /* ensures it starts from top of the screen */
   left: 0;
   width: 80px;
+  height: 100vh; /* full viewport height */
   background: white;
-  height: calc(100% - 104px); /* adjust height to avoid going under header */
   padding-top: 30px;
   box-shadow: 1px 0 4px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 50px;
+  z-index: 100; /* to keep it above other content if needed */
 }
+
 
  .bar img {
       width: 25px;
@@ -23,9 +25,9 @@
       transform: scale(1.1);
     }
 .main {
-      margin-left: 79px;
-      width: calc(100% - 60px);
-    }
+  margin-left: 80px; /* match sidebar width */
+  width: calc(100% - 80px);
+}
 
     .hero {
       position: relative;

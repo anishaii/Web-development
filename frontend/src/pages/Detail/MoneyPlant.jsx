@@ -7,13 +7,13 @@ const MoneyPlant = () => {
     <div>
       <div className="money-container">
 
-        <div className="money-side">
-          <img src={assets.menu} className="money-icon" />
-          <img src={assets.home} className="money-icon" />
-          <img src={assets.basket} className="money-icon" />
-          <img src={assets.heart} className="money-icon" />
-          <img src={assets.care} className="money-icon" />
-        </div>
+                 <aside className="bar">
+                    <img src={assets.menu}  />
+                    <img src={assets.home} />
+                    <img src={assets.basket} />
+                    <img src={assets.heart} />
+                    <img src={assets.care} />
+                  </aside>
 
         <div className="money-main">
           <div className="money-top">
