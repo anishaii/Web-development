@@ -10,6 +10,7 @@ import MoneyPlant from "./pages/Detail/MoneyPlant";
 import NeonPlant  from "./pages/Detail/NeonPlant";
 import Orchid from "./pages/Detail/Orchid";
 import SpiderPlant from "./pages/Detail/SpiderPlant";
+import Palm from "./pages/Detail/Palm";
 
 const App = () => {
   const isAuthenticated = localStorage.getItem("token");
@@ -49,6 +50,7 @@ const App = () => {
       <Route path="neonplant" element ={< NeonPlant/>}/>
       <Route path="orchid" element ={< Orchid/>}/>
       <Route path="spiderplant" element ={ <SpiderPlant/>}/>
+      <Route path="palm" element ={<Palm/>}/>
 
    
 

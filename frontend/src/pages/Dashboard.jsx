@@ -42,7 +42,7 @@ const Dashboard = () => {
           <img src={assets.neon} onClick={ () => navigation('/neonplant')}/>
           <div className="product-details">
             <span className="name">Neon Prayer Plant</span>
-            <span className="price">$69 - $89</span>
+            <span className="price">NPR. 800</span>
           </div>
         </div>
 
@@ -51,7 +51,7 @@ const Dashboard = () => {
           <img src={assets.orchid} onClick={ () => navigation('/orchid')}/>
           <div className="product-details">
             <span className="name">White Orchid</span>
-            <span className="price">$49</span>
+            <span className="price">NPR. 1500</span>
           </div>
         </div>
 
@@ -65,10 +65,10 @@ const Dashboard = () => {
         </div>
 
         <div className="product-card">
-          <img src={assets.palm}/>
+          <img src={assets.palm} onClick={() => navigation('/palm')}/>
           <div className="product-details">
             <span className="name">Cat Palm</span>
-            <span className="price">$169 - $199</span>
+            <span className="price">Npr. 1100</span>
           </div>
         </div>
       </div>
