@@ -30,6 +30,7 @@ import delivery from './delivery.png'
 import high_quality from './high_quality.png'
 import favorite from './favorite.png'
 import np_plant from './np_plant.jpg'
+import o_plant from './o_plant.jpg'
 
 
 
@@ -50,6 +51,6 @@ export const assets ={
     menu,
     care,
     home,pineapple,succulents,neon,spider,orchid,palm,money_tree,money_tree,mosntera,
-    back,unpackingg,sunlight,WAtering,mtree,delivery,high_quality,favorite,np_plant
+    back,unpackingg,sunlight,WAtering,mtree,delivery,high_quality,favorite,np_plant,o_plant
 
 }

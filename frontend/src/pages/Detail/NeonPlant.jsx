@@ -28,9 +28,8 @@ const NeonPlant = () => {
                         <h2>Neon Prayer Plant</h2>
                         <p className="pricep">NPr. 800</p>
                         <p className="desc">
-                          Popular for its use in Feng Shui, the Money Tree is a pet-friendly and
-                          air-purifying plant with large star-shaped leaves and a braided trunk
-                          to give your home a tropical feel.
+                         The Neon Prayer Plant has striking bright green oval leaves with a herringbone-like pattern of light yellow veining. 
+                         The colorful foliage make this a perfect plant for window sills, mantles, or shelves that need a splash of color.
                         </p>
                         <button className="add-to-cart">Add to cart</button>
         

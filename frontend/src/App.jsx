@@ -8,6 +8,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import PlantCare from "./pages/plantCare";
 import MoneyPlant from "./pages/Detail/MoneyPlant";
 import NeonPlant  from "./pages/Detail/NeonPlant";
+import Orchid from "./pages/Detail/Orchid";
 
 const App = () => {
   const isAuthenticated = localStorage.getItem("token");
@@ -45,6 +46,7 @@ const App = () => {
       <Route path="plantcare" element={< PlantCare/>}/>
       <Route path="moneyplant" element={< MoneyPlant/>}/>
       <Route path="neonplant" element ={< NeonPlant/>}/>
+      <Route path="orchid" element ={< Orchid/>}/>
 
    
 
