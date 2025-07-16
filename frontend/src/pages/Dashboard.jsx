@@ -94,7 +94,7 @@ const Dashboard = () => {
         </div>
 
         <div className="product-card">
-          <img src={assets.mosntera}/>
+          <img src={assets.mosntera}  onClick={() => navigation('/monstera')} />
           <div className="product-details">
             <span className="name">Monstera Deliciosa</span>
             <span className="price">$99</span>
