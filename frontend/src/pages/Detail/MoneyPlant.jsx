@@ -15,62 +15,64 @@ const MoneyPlant = () => {
                     <img src={assets.care} />
                   </aside>
 
-        <div className="money-main">
-          <div className="money-top">
-            <div className="money-image-box">
-              <img src={assets.money_tree} className="money-plant-img" />
-            </div>
+                  <div className="money-content">
 
-            <div className="money-details">
-              <h1>Money Tree</h1>
-              <p className="money-price">NPr. 800</p>
-              <p className="money-desc">
-                Popular for its use in Feng Shui, the Money Tree is a pet-friendly and air-purifying plant with large star-shaped leaves and a braided trunk to give your home a tropical feel.
-              </p>
-
-              <div className="money-btn-container">
-                <button className="money-add-btn">Add to cart</button>
+            <div className="money-top">
+              <div className="image-wrapper">
+                <img src={assets.money_tree} className="money-img" />
+                <img src={assets.favorite} className="heart-icon" alt="Heart Icon" />
               </div>
 
-              <div className="money-shipping">
-                <div className="money-info-box">
-                  <img src={assets.delivery} />
-                  <p><strong>Free Shipping</strong><br /><span>Get free standard shipping when you spend $125 or more.</span></p>
-                </div>
-                <div className="money-info-box">
-                  <img src={assets.high_quality}  />
-                  <p><strong>Guarantee</strong><br /><span>If your plant dies within 30 days, we’ll replace it for free</span></p>
+              <div className="money-details">
+                <h2>Money Tree</h2>
+                <p className="pricep">NPr. 800</p>
+                <p className="desc">
+                  Popular for its use in Feng Shui, the Money Tree is a pet-friendly and
+                  air-purifying plant with large star-shaped leaves and a braided trunk
+                  to give your home a tropical feel.
+                </p>
+                <button className="add-to-cart">Add to cart</button>
+
+                <div className="info-section">
+                  <div>
+                    <img src={assets.delivery}  />
+                    <p><strong>Free Shipping</strong><br />Get free standard shipping when you spend $125 or more.</p>
+                  </div>
+                  <div>
+                    <img src={assets.high_quality}  />
+                    <p><strong>Guarantee</strong><br />If your plant dies within 30 days, we’ll replace it for free.</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="money-bottom">
-            <div className="money-benefits">
-              <h2>Benefits of the Money Tree</h2>
+            <div className="money-bottom">
+              <div className="benefits">
+                <h3>Benefits of the Money Tree</h3>
+                <p><strong>Unique, Sculptural Design</strong><br />
+                  Its lush foliage create a bold, eye-catching focal point, perfect for entryways or modern interiors.</p>
 
-              <h3>Unique, Sculptural Design</h3>
-              <p>Its lush foliage create a bold, eye-catching focal point, perfect for entryways or modern interiors.</p>
+                <p><strong>Low Maintenance Appeal</strong><br />
+                  With moderate care, it stays healthy and vibrant, ideal for those seeking an impressive plant with minimal fuss.</p>
 
-              <h3>Low Maintenance Appeal</h3>
-              <p>With moderate care, it stays healthy and vibrant, ideal for those seeking an impressive plant with minimal fuss.</p>
+                <p><strong>Calming Effect</strong><br />
+                  Its rich green leaves and structured form create a soothing, natural focal point that can help ease tension in busy spaces.</p>
 
-              <h3>Calming Effect</h3>
-              <p>Its rich green leaves and structured form create a soothing, natural focal point that can help ease tension in busy spaces.</p>
+                <h4>Expert Care Guidelines</h4>
+                <ul>
+                  <li><strong>Watering:</strong> Water every 1-2 weeks when the top inch of soil feels dry; avoid overwatering.</li>
+                  <li><strong>Lighting:</strong> Place in bright, indirect light; tolerates lower light but thrives near filtered sunlight.</li>
+                  <li><strong>Humidity:</strong> Prefers moderate humidity; mist occasionally.</li>
+                </ul>
+              </div>
 
-              <h3>Expert Care Guidelines</h3>
-              <ul>
-                <li><strong>Watering:</strong> Water every 1–2 weeks when the top inch of soil feels dry; avoid overwatering.</li>
-                <li><strong>Lighting:</strong> Place in bright, indirect light; tolerates lower light but thrives near filtered sunlight.</li>
-                <li><strong>Humidity:</strong> Prefers moderate humidity; mist occasionally.</li>
-              </ul>
+              <img src={assets.mtree}  className="bottom-img" />
             </div>
 
-            <div className="money-close-up-img">
-              <img src={assets.mtree} />
-            </div>
           </div>
-        </div>
+
+
+      
       </div>
     </div>
   )
