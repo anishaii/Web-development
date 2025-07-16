@@ -102,7 +102,7 @@ const Dashboard = () => {
         </div>
 
         <div className="product-card">
-          <img src={assets.succulents}/>
+          <img src={assets.succulents} onClick={() => navigation ('/succulent')} />
           <div className="product-details">
             <span className="name">Tough Stuff Collection</span>
             <span className="price"><span className="strikethrough">$117</span> $79</span>

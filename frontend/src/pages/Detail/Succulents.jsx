@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { assets } from '../../assets/assets'
 
-const Wistera = () => {
+const Succulents = () => {
     const Navigate = useNavigate()
   return (
     <div>
@@ -20,17 +20,17 @@ const Wistera = () => {
       
                   <div className="money-top">
                     <div className="image-wrapper">
-                      <img src={assets.mosntera} className="money-img" />
+                      <img src={assets.succulents} className="money-img" />
                       <img src={assets.favorite} className="heart-icon" alt="Heart Icon" />
                     </div>
       
                     <div className="money-details">
-                      <h2>Monstera Deliciosa</h2>
-                      <p className="pricep">NPr. 2500</p>
+                      <h2>Succulent Sets</h2>
+                      <p className="pricep">NPr. 1200</p>
                       <p className="desc">
-                     The Monstera deliciosa, also known as the Swiss Cheese Plant, is a striking tropical plant 
-                     originating from the rainforests of southern Mexico.Lively and wild with large, tropical leaves 
-                     make it a popular choice for indoor gardens.
+                        Whether you’re starting your plant family or adding to it, these hand-selected easy plants are perfect for 
+                        less-than-ideal conditions. Each of these three plants is incredibly easy, will adapt to nearly any available 
+                        light, and are extremely forgiving.Their easy-going nature makes them perfect for office spaces, dorm rooms, and beginners.
                       </p>
                       <button className="add-to-cart">Add to cart</button>
       
@@ -67,7 +67,7 @@ const Wistera = () => {
                       </ul>
                     </div>
       
-                    <img src={assets.swisschesse_plant}  className="bottom-img" />
+                    <img src={assets.setss}  className="bottom-img" />
                   </div>
       
                 </div>
@@ -79,4 +79,4 @@ const Wistera = () => {
   )
 }
 
-export default Wistera
+export default Succulents
