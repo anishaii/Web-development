@@ -78,10 +78,10 @@ const Dashboard = () => {
       <div className="product-grid">
         <div className="product-card">
           <span className="badge green">SUMMER EXCLUSIVE</span>
-          <img src={assets.pineapple} />
+          <img src={assets.pineapple} onClick={() => navigation('/pineapple')} />
           <div className="product-details">
             <span className="name">Bromeliad Pineapple</span>
-            <span className="price">$79</span>
+            <span className="price">NPR. 2000</span>
           </div>
         </div>
 

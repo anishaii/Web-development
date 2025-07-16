@@ -11,6 +11,7 @@ import NeonPlant  from "./pages/Detail/NeonPlant";
 import Orchid from "./pages/Detail/Orchid";
 import SpiderPlant from "./pages/Detail/SpiderPlant";
 import Palm from "./pages/Detail/Palm";
+import Pineapple from "./pages/Detail/Pineapple";
 
 const App = () => {
   const isAuthenticated = localStorage.getItem("token");
@@ -51,6 +52,7 @@ const App = () => {
       <Route path="orchid" element ={< Orchid/>}/>
       <Route path="spiderplant" element ={ <SpiderPlant/>}/>
       <Route path="palm" element ={<Palm/>}/>
+      <Route path="pineapple" element ={<Pineapple/>}/>
 
    
 
