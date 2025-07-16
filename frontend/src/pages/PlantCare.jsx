@@ -1,14 +1,16 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import './PlantCare.css'
+import { useNavigate } from 'react-router-dom'
 
 
 const PlantCare = () => {
+  const navigate = useNavigate()
   return (
     <div>
           <aside className="bar">
-            <img src={assets.menu}  />
-            <img src={assets.home} />
+            <img src={assets.menu} onClick={() => navigate('/dashboard')} />
+            <img src={assets.home} onClick={() => navigate('/dashboard')}/>
             <img src={assets.basket} />
             <img src={assets.heart} />
             <img src={assets.care} />

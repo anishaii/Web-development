@@ -7,7 +7,7 @@ const MoneyPlant = () => {
     <div>
       <div className="money-container">
 
-                 <aside className="bar">
+                <aside className="bar">
                     <img src={assets.menu}  />
                     <img src={assets.home} />
                     <img src={assets.basket} />
