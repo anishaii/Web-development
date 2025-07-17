@@ -19,11 +19,7 @@ const Home = () => {
   </ul>
 
       <div className='navbar-right'>
-        <img src={assets.search_icon} alt="" />
-            <div className='nav-search-icon'>
-                <img src={assets.basket_icon} alt="" />
-                <div className="dot"></div>
-            </div>
+      
       <button onClick={() => navigate('/login')} >Login</button>
       <button onClick={() => navigate('/signup')} > Register</button> 
       </div>
@@ -38,7 +34,7 @@ const Home = () => {
             <p>"Order food from your favorite restaurants and track your delivery in real-time.Quick, easy, and delicious!"</p>
           </div>
 
-          <button className='shop-now'><Link to ={"/dashboard"}>Shop now</Link></button>
+          
       </section>
       <section className="categories-section">
       <h3>Explore Categories</h3>

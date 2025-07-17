@@ -22,8 +22,8 @@ const Dashboard = () => {
   
     <input type="text" placeholder="Search for plants" className="search-box"/>
     <div className="icons">
-      <button  className="signup-btn">Sign up</button>
-      <button onClick={logoutHandler}>Logout</button>
+      
+      <button className="logout" onClick={logoutHandler}>Logout</button>
     </div>
   </header>
   <aside class="sidebar">

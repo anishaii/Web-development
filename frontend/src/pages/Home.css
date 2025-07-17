@@ -49,10 +49,7 @@
     background-color: #e9f0e3;
 }
 
-/* .navbar .active{
-    padding-bottom: 2px;
-    border-bottom: 2px solid #acdb82;
-} */
+
 
 .navbar li{
     cursor: pointer;
@@ -113,9 +110,6 @@
                 border-radius: 2px;
                 cursor: pointer;
                 margin-right: 9px;
-            
-             
-
           }
 
           .top-leftText .door{
