@@ -6,6 +6,10 @@ const Product = sequelize.define("Product", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+    image: {
+    type: DataTypes.STRING,
+    allowNull: true,  
+  },
   price: {
     type: DataTypes.FLOAT,
     allowNull: false,
@@ -18,10 +22,10 @@ const Product = sequelize.define("Product", {
 
 (async () => {
   try {
-    await Product.sync();
-    console.log("The Product table has been created or updated.");
+    await Product.sync();  
+    console.log(" Product table synced successfully!");
   } catch (error) {
-    console.error("Error syncing the Product model:", error);
+    console.error("Error syncing table:", error);
   }
 })();
 

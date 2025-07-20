@@ -7,6 +7,7 @@ const { authRouter } = require("./routes/authRoutes");
 const { authenticateToken } = require("./middleware/token-middleware");
 const uploadRouter = require("./routes/uploadRoutes");
 const { createUploadsFolder } = require("./security/helper");
+const { productRouter } = require("./routes/ProductRoutes");
 
 dotenv.config();
 
@@ -35,7 +36,8 @@ app.use("/api/users", authenticateToken, userRouter); // 🔐 Only protect sensi
 // ✅ Routes
 
 app.use("/api/auth", authRouter); 
-app.use("/api/file", uploadRouter);       
+app.use("/api/file", uploadRouter);   
+app.use("/api/products", productRouter);    
 // ✅ Connect to DB
 connection();
 
