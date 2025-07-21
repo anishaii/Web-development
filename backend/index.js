@@ -8,6 +8,7 @@ const { authenticateToken } = require("./middleware/token-middleware");
 const uploadRouter = require("./routes/uploadRoutes");
 const { createUploadsFolder } = require("./security/helper");
 const { productRouter } = require("./routes/ProductRoutes");
+const multer = require("multer");
 
 dotenv.config();
 
@@ -37,7 +38,17 @@ app.use("/api/users", authenticateToken, userRouter); // 🔐 Only protect sensi
 
 app.use("/api/auth", authRouter); 
 app.use("/api/file", uploadRouter);   
-app.use("/api/products", productRouter);    
+app.use("/api/products", productRouter); 
+
+// *** NEW: Multer error handling middleware ***
+app.use((err, req, res, next) => {
+  if (err instanceof multer.MulterError) {
+    return res.status(400).json({ message: err.message });
+  }
+  next(err);
+});
+
+
 // ✅ Connect to DB
 connection();
 
