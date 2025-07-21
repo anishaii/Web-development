@@ -111,7 +111,7 @@ const Dashboard = () => {
         <img src={assets.menu} />
         <img src={assets.home} />
         <img src={assets.basket} />
-        <img src={assets.heart} />
+        <img src={assets.heart} onClick={() => navigate('/fav')} />
         <img src={assets.care} onClick={() => navigate('/plantcare')} />
       </aside>
 

@@ -14,6 +14,8 @@ import Palm from "./pages/Detail/Palm";
 import Pineapple from "./pages/Detail/Pineapple";
 import Wistera from "./pages/Detail/Wistera";
 import Succulents from "./pages/Detail/Succulents";
+import Favorite from "./pages/Favorite";
+import Admin from "./pages/Admin";
 
 
 const App = () => {
@@ -58,6 +60,8 @@ const App = () => {
       <Route path="pineapple" element ={<Pineapple/>}/>
       <Route path="monstera" element ={<Wistera/>}/>
       <Route path="succulent" element ={<Succulents/>}/>
+      <Route path="fav" element={<Favorite/>}/>
+      <Route path="admin" element ={<Admin/>}/>
      
      
     

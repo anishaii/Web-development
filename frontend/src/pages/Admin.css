@@ -1,0 +1,137 @@
+.admin-container {
+  display: flex;
+}
+
+/* Fixed Sidebar */
+.admin-sidebar {
+  width: 260px;
+  background: #f0f0f0;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+/* Logo Section */
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.admin-logo img {
+  width: 190px;
+  height: 90px;
+}
+
+.admin-sidebar h2 {
+  font-family: cursive;
+  color: #406539;
+  margin: 30px 0 20px;
+}
+
+/* Form Styling */
+.admin-form label {
+  display: block;
+  margin: 5px;
+}
+
+.admin-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.admin-form button {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 2px #aaa;
+}
+
+/* Main Content Section */
+.admin-main-content {
+  margin-left: 260px; /* Push content to the right */
+  flex: 1;
+  background: white;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Header */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #6e9665;
+  color: white;
+  padding: 15px 20px;
+}
+
+.admin-header p {
+  font-size: 16px;
+}
+
+.admin-header h3 {
+  font-size: 18px;
+}
+
+/* User Info */
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-user img {
+  width: 32px;
+  height: 32px;
+}
+
+.admin-user-name {
+  font-weight: bold;
+}
+
+.admin-user-role {
+  font-size: 12px;
+}
+
+/* Table */
+.admin-table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+.admin-table thead {
+  background: #e9f2e7;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.admin-table td img {
+  width: 30px;
+  height: auto;
+  border-radius: 5px;
+}
