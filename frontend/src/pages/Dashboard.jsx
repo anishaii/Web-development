@@ -122,7 +122,7 @@ const Dashboard = () => {
             {filteredPlants.map((plant) => (
               <div className="product-card" key={plant.id}>
                 {plant.badge && (
-                  <span className={`badge ${plant.badge.includes('NEW') || plant.badge.includes('SUMMER') ? 'green' : ''}`}>
+                  <span className={`badge ${plant.badge.includes('Recently Added') || plant.badge.includes('SUMMER') ? 'green' : ''}`}>
                     {plant.badge}
                   </span>
                 )}

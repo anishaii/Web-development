@@ -9,8 +9,8 @@ const Admin = () => {
   const [quantity, setQuantity] = useState("");
   const [image, setImage] = useState(null);
   const [products, setProducts] = useState([]);
+  const [editId, setEditId] = useState(null);
 
-  // Fetch products from backend
   const fetchProducts = async () => {
     try {
       const res = await axios.get("http://localhost:5000/api/products");
@@ -24,7 +24,6 @@ const Admin = () => {
     fetchProducts();
   }, []);
 
-  // Add product handler
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -32,25 +31,52 @@ const Admin = () => {
     formData.append("name", name);
     formData.append("price", price);
     formData.append("quantity", quantity);
-    formData.append("image", image);
+    if (image) formData.append("image", image);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/products", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      if (editId) {
+        await axios.put(`http://localhost:5000/api/products/${editId}`, formData, {
+          headers: { "Content-Type": "multipart/form-data" },
+        });
+        alert("✏️ Product updated successfully!");
+      } else {
+        await axios.post("http://localhost:5000/api/products", formData, {
+          headers: { "Content-Type": "multipart/form-data" },
+        });
+        alert("✅ Product added successfully!");
+      }
 
-      alert("✅ Product added successfully!");
       setName("");
       setPrice("");
       setQuantity("");
       setImage(null);
-      fetchProducts(); // Refresh product list
+      setEditId(null);
+      fetchProducts();
     } catch (err) {
       console.error("❌ Error:", err.response?.data || err.message);
-      alert("Failed to add product");
+      alert("Something went wrong");
     }
+  };
+
+  const handleDelete = async (id) => {
+    if (!window.confirm("Are you sure you want to delete this product?")) return;
+
+    try {
+      await axios.delete(`http://localhost:5000/api/products/${id}`);
+      alert("🗑️ Product deleted successfully!");
+      fetchProducts();
+    } catch (err) {
+      console.error("❌ Delete failed:", err);
+      alert("Failed to delete product.");
+    }
+  };
+
+  const handleEdit = (product) => {
+    setName(product.name);
+    setPrice(product.price);
+    setQuantity(product.quantity);
+    setImage(null); // new image optional
+    setEditId(product.id);
   };
 
   return (
@@ -76,7 +102,7 @@ const Admin = () => {
             type="file"
             accept="image/*"
             onChange={(e) => setImage(e.target.files[0])}
-            required
+            required={!editId} // required only when adding
           />
 
           <label>Price</label>
@@ -97,7 +123,22 @@ const Admin = () => {
             required
           />
 
-          <button type="submit">ADD</button>
+          <button type="submit">{editId ? "UPDATE" : "ADD"}</button>
+
+          {editId && (
+            <button
+              type="button"
+              onClick={() => {
+                setName("");
+                setPrice("");
+                setQuantity("");
+                setImage(null);
+                setEditId(null);
+              }}
+            >
+              Cancel Edit
+            </button>
+          )}
         </form>
       </aside>
 
@@ -142,8 +183,18 @@ const Admin = () => {
                 <td>{product.price}</td>
                 <td>{product.quantity}</td>
                 <td>
-                  <img src={assets.updated} className="admin-icon" alt="Update" />
-                  <img src={assets.trash} className="admin-icon" alt="Delete" />
+                  <img
+                    src={assets.updated}
+                    className="admin-icon"
+                    alt="Update"
+                    onClick={() => handleEdit(product)}
+                  />
+                  <img
+                    src={assets.trash}
+                    className="admin-icon"
+                    alt="Delete"
+                    onClick={() => handleDelete(product.id)}
+                  />
                 </td>
               </tr>
             ))}
