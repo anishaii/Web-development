@@ -1,5 +1,5 @@
 const express = require("express");
-const upload = require("../middleware/multerConfig");  // multer config imported
+const upload = require("../middleware/multerConfig");
 const {
   getAllProducts,
   addProduct,
@@ -10,11 +10,8 @@ const {
 const router = express.Router();
 
 router.get("/", getAllProducts);
-
-// *** UPDATED: Added multer middleware upload.single("image") to parse file upload ***
 router.post("/", upload.single("image"), addProduct);
-
 router.delete("/:id", deleteProduct);
-router.put("/:id", updateProduct);
+router.put("/:id", upload.single("image"), updateProduct); // Added multer middleware here
 
 module.exports = { productRouter: router };

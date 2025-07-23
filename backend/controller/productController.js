@@ -1,23 +1,16 @@
 const Product = require("../model/productSchema");
 
-// ✅ ADD PRODUCT
+// ADD PRODUCT
 const addProduct = async (req, res) => {
   try {
-    const { name, price, quantity } = req.body; // 🔄 Removed productId
+    const { name, price, quantity } = req.body;
     const image = req.file ? req.file.filename : null;
 
-    // 🔄 Updated validation
     if (!name || !price || !quantity || !image) {
       return res.status(400).json({ message: "All fields are required." });
     }
 
-    // 🔄 Removed productId uniqueness check
-    const newProduct = await Product.create({
-      name,
-      price,
-      quantity,
-      image,
-    });
+    const newProduct = await Product.create({ name, price, quantity, image });
 
     return res.status(201).json({
       message: "Product added successfully",
@@ -29,7 +22,7 @@ const addProduct = async (req, res) => {
   }
 };
 
-// ✅ GET ALL PRODUCTS
+// GET ALL PRODUCTS
 const getAllProducts = async (req, res) => {
   try {
     const products = await Product.findAll();
@@ -40,7 +33,7 @@ const getAllProducts = async (req, res) => {
   }
 };
 
-// ✅ DELETE PRODUCT
+// DELETE PRODUCT
 const deleteProduct = async (req, res) => {
   try {
     const id = req.params.id;
@@ -55,25 +48,20 @@ const deleteProduct = async (req, res) => {
   }
 };
 
-// ✅ UPDATE PRODUCT
+// ✅ FIXED: UPDATE PRODUCT
 const updateProduct = async (req, res) => {
   try {
     const id = req.params.id;
-    const { name, price, quantity } = req.body; // 🔄 Removed productId
-    const image = req.file ? req.file.filename : null;
-
+    const { name, price, quantity } = req.body;
     const product = await Product.findByPk(id);
+
     if (!product) {
       return res.status(404).json({ message: "Product not found" });
     }
 
-    // 🔄 Removed product.productId = ...
-    product.name = name || product.name;
-    product.price = price || product.price;
-    product.quantity = quantity || product.quantity;
-    if (image) product.image = image;
+    const image = req.file ? req.file.filename : product.image;
 
-    await product.save();
+    await product.update({ name, price, quantity, image });
 
     return res.status(200).json({
       message: "Product updated successfully",
