@@ -1,0 +1,31 @@
+.favorites-list {
+  margin: 40px 80px 40px 80px; /* margin-left matches sidebar */
+  font-family: sans-serif;
+}
+
+.favorite-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #f5fbf4;
+}
+
+.favorite-img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.favorite-info h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.favorite-info p {
+  margin: 4px 0 0 0;
+  color: #333;
+}

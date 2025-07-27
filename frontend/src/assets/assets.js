@@ -39,6 +39,9 @@ import swisschesse_plant from './swisschesse_plant.jpg'
 import setss from './setss.jpg'
 import trash from './trash.png'
 import updated from './updated.png'
+import bill from './bill.png'
+import cod from './cod.png'
+import location from './location.png'
 
 
 
@@ -60,6 +63,6 @@ export const assets ={
     care,
     home,pineapple,succulents,neon,spider,orchid,palm,money_tree,money_tree,mosntera,
     back,unpackingg,sunlight,WAtering,mtree,delivery,high_quality,favorite,np_plant,o_plant,Spider_plant,plm,
-    pinetree,p_apple,swisschesse_plant,setss,trash,updated
+    pinetree,p_apple,swisschesse_plant,setss,trash,updated,bill,cod,location
 
 }

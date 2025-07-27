@@ -16,6 +16,8 @@ import Wistera from "./pages/Detail/Wistera";
 import Succulents from "./pages/Detail/Succulents";
 import Favorite from "./pages/Favorite";
 import Admin from "./pages/Admin";
+import Delivery from "./pages/Delivery";
+import Cart from "./pages/Cart";
 
 
 const App = () => {
@@ -62,6 +64,8 @@ const App = () => {
       <Route path="succulent" element ={<Succulents/>}/>
       <Route path="fav" element={<Favorite/>}/>
       <Route path="admin" element ={<Admin/>}/>
+      <Route path="delivery" element ={<Delivery/>}/>
+      <Route path="cart" element ={<Cart/>}/>
      
      
     
