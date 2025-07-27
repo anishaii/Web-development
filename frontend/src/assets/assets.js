@@ -42,6 +42,8 @@ import updated from './updated.png'
 import bill from './bill.png'
 import cod from './cod.png'
 import location from './location.png'
+import arrow from './arrow.png'
+import confetti from './confetti.png'
 
 
 
@@ -63,6 +65,6 @@ export const assets ={
     care,
     home,pineapple,succulents,neon,spider,orchid,palm,money_tree,money_tree,mosntera,
     back,unpackingg,sunlight,WAtering,mtree,delivery,high_quality,favorite,np_plant,o_plant,Spider_plant,plm,
-    pinetree,p_apple,swisschesse_plant,setss,trash,updated,bill,cod,location
+    pinetree,p_apple,swisschesse_plant,setss,trash,updated,bill,cod,location,arrow,confetti
 
 }

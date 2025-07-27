@@ -1,8 +1,10 @@
 import React from 'react'
 import { assets } from '../assets/assets'
 import './Delivery.css'
+import { useNavigate } from 'react-router-dom'
 
 const Delivery = () => {
+  const navigate = useNavigate()
   return (
     <div>
       <div className="checkout-container">
@@ -89,7 +91,7 @@ const Delivery = () => {
               </div>
             </div>
 
-            <button className="checkout-place-order-btn">PLACE ORDER</button>
+            <button onClick={() => navigate('/confirm')} className="checkout-place-order-btn">PLACE ORDER</button>
           </div>
         </div>
 

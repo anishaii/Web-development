@@ -110,7 +110,7 @@ const Dashboard = () => {
       <aside className="sidebar">
         <img src={assets.menu} />
         <img src={assets.home} />
-        <img src={assets.basket} />
+        <img src={assets.basket} onClick={() => navigate('/cart')} />
         <img src={assets.heart} onClick={() => navigate('/fav')} />
         <img src={assets.care} onClick={() => navigate('/plantcare')} />
       </aside>

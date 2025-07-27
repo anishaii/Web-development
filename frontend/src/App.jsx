@@ -18,6 +18,8 @@ import Favorite from "./pages/Favorite";
 import Admin from "./pages/Admin";
 import Delivery from "./pages/Delivery";
 import Cart from "./pages/Cart";
+import { CartProvider } from "./components/CartContext";
+import OrderConfirmation from "./pages/OrderConfirmation";
 
 
 const App = () => {
@@ -25,6 +27,7 @@ const App = () => {
   console.log(isAuthenticated);
 
   return (
+    <CartProvider>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route
@@ -66,6 +69,7 @@ const App = () => {
       <Route path="admin" element ={<Admin/>}/>
       <Route path="delivery" element ={<Delivery/>}/>
       <Route path="cart" element ={<Cart/>}/>
+      <Route path="confirm" element={<OrderConfirmation/>}/>
      
      
     
@@ -73,6 +77,7 @@ const App = () => {
    
 
     </Routes>
+    </CartProvider>
 
   );
 };

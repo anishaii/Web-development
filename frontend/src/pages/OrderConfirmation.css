@@ -1,0 +1,71 @@
+.order-confirmation {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header */
+.bloom-header {
+  padding: 20px;
+  text-align: left;
+}
+
+.bloom-logo {
+  height: 70px;
+}
+
+/* Main Content */
+.confirmation-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirmation-box {
+  border: 1px solid #a3d9a5;
+  border-radius: 8px;
+  padding: 30px 40px;
+  text-align: center;
+  max-width: 600px;
+  background-color: #fdfdfd;
+}
+
+.confirmation-icon {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.confirmation-box p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.confirmation-btn {
+  padding: 8px 18px;
+  background-color: transparent;
+  border: 1px solid #6cc36d;
+  color: #444;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.confirmation-btn:hover {
+  background-color: #6cc36d;
+  color: #fff;
+}
+
+/* Footer */
+.confirmation-footer {
+  text-align: center;
+  padding: 30px 0;
+  font-size: 20px;
+  font-style: italic;
+  color: #4b934e;
+  background-color: #f5fdf6;
+}

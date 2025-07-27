@@ -11,7 +11,7 @@ const NeonPlant = () => {
                         <aside className="bar">
                             <img src={assets.menu} />
                             <img src={assets.home} onClick={() => Navigate('/dashboard')}/>
-                            <img src={assets.basket} />
+                            <img src={assets.basket} onClick={() => Navigate('/cart')}/>
                             <img src={assets.heart} />
                             <img src={assets.care} />
                           </aside>
