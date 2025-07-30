@@ -82,3 +82,15 @@
       text-decoration: none;
       font-weight: bold;
     }
+
+.gender-option {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  margin-right: 20px; /* space between each option */
+  cursor: pointer; /* nice UX */
+}
+
+.gender-option input[type="radio"] {
+  margin-right: 6px; /* space between radio button and label text */
+}

@@ -9,14 +9,17 @@ const uploadRouter = require("./routes/uploadRoutes");
 const { createUploadsFolder } = require("./security/helper");
 const { productRouter } = require("./routes/ProductRoutes");
 const multer = require("multer");
+const Favorite = require("./model/favoriteModel");
+
+const { sequelize } = require("./Database/db");
+sequelize.sync().then(() => {
+  console.log("All models synced successfully.");
+});
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
-// Create uploads folder at startup
-createUploadsFolder();
 
 app.use(cors({
   origin: "http://localhost:5173",
@@ -24,6 +27,14 @@ app.use(cors({
 }));
 
 app.use(express.json());
+
+const favoriteRoutes = require("./routes/favoriteRoute");
+app.use("/api/favorites", favoriteRoutes);
+
+// Create uploads folder at startup
+createUploadsFolder();
+
+
 
 
 

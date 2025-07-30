@@ -105,29 +105,30 @@ const Signup = () => {
             </div>
 
             <div className="gender-group1">
-              <label>Gender:</label>
-              <label>
-                <input
-                  type="radio"
-                  value="Male"
-                  {...register("gender", { required: true })}
-                /> Male
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  value="Female"
-                  {...register("gender", { required: true })}
-                /> Female
-              </label>
-              <label>
-                <input
-                  type="radio"
-                  value="Other"
-                  {...register("gender", { required: true })}
-                /> Other
-              </label>
-            </div>
+            <label>Gender:</label>
+            <label className="gender-option">
+              <input
+                type="radio"
+                value="Male"
+                {...register("gender", { required: true })}
+              /> Male
+            </label>
+            <label className="gender-option">
+              <input
+                type="radio"
+                value="Female"
+                {...register("gender", { required: true })}
+              /> Female
+            </label>
+            <label className="gender-option">
+              <input
+                type="radio"
+                value="Other"
+                {...register("gender", { required: true })}
+              /> Other
+            </label>
+          </div>
+
 
             <div className="btn-container1">
               <button type="submit" className="register-btn1">Register</button>

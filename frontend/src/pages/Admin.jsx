@@ -150,10 +150,10 @@ const Admin = () => {
           </div>
           <div className="admin-user">
             <div>
-              <p className="admin-user-name">John Doe</p>
-              <p className="admin-user-role">Admin</p>
+              <p className="admin-user-name">Admin</p>
+             
             </div>
-            <img src={assets.user_icon} alt="User Icon" />
+            <img src={assets.user}/>
           </div>
         </header>
 
