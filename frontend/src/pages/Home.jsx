@@ -27,11 +27,11 @@ const Home = () => {
      <section className='main-img'>
         <img src={assets.plant} alt="" className="background-img"/>
          <div className="top-leftText">
-           <h1>Delicious Food Delivered To Your <span class="door">Door</span> <span className="step">Step</span></h1>
+           <h1>Fresh plants delivered To Your <span class="door">Door</span> <span className="step">Step</span></h1>
           </div>
 
            <div className="top-leftText2">
-            <p>"Order food from your favorite restaurants and track your delivery in real-time.Quick, easy, and delicious!"</p>
+            <p>"Bring nature home with handpicked plants delivered to your door. Fast, fresh, and hassle-free!"</p>
           </div>
 
           
