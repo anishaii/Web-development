@@ -170,3 +170,21 @@ select {
   font-size: 0.9rem;
   margin-top: 4px;
 }
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+
+  .checkout-form-section,
+  .checkout-summary-section {
+    max-width: 100% !important; /* override fixed widths */
+    flex: none;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Add some margin between stacked sections */
+  .checkout-summary-section {
+    margin-top: 30px;
+  }
+}
