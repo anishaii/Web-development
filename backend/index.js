@@ -10,6 +10,7 @@ const { createUploadsFolder } = require("./security/helper");
 const { productRouter } = require("./routes/ProductRoutes");
 const multer = require("multer");
 const Favorite = require("./model/favoriteModel");
+const deliveryRouter = require('./routes/deliveryRoutes');
 
 const { sequelize } = require("./Database/db");
 sequelize.sync().then(() => {
@@ -33,6 +34,8 @@ app.use("/api/favorites", favoriteRoutes);
 
 // Create uploads folder at startup
 createUploadsFolder();
+
+app.use('/api/delivery', deliveryRouter);
 
 
 
