@@ -23,8 +23,11 @@ const OrderConfirmation = () => {
         </div>
       </main>
 
-      <footer className="confirmation-footer">
-        <p>Keep Shopping with us !!!</p>
+        <footer className="confirmation-footer">
+        <div className="footer-image-container">
+          <img src={assets.background}  className="footer-image" />
+          <p className="footer-text">Keep Shopping with us !!!</p>
+        </div>
       </footer>
     </div>
   );

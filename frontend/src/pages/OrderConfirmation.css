@@ -10,10 +10,11 @@
 .bloom-header {
   padding: 20px;
   text-align: left;
+  background-color: white;
 }
 
 .bloom-logo {
-  height: 70px;
+  height: 80px;
 }
 
 /* Main Content */
@@ -62,10 +63,32 @@
 
 /* Footer */
 .confirmation-footer {
-  text-align: center;
-  padding: 30px 0;
-  font-size: 20px;
-  font-style: italic;
-  color: #4b934e;
+  position: relative;
+  height: 200px;
   background-color: #f5fdf6;
+  overflow: hidden;
+}
+
+.footer-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8; /* slightly fade the image for better text visibility */
+}
+
+.footer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #4b934e;
+  font-size: 24px;
+  font-style: italic;
+  z-index: 1;
 }
