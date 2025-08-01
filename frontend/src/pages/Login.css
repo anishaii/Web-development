@@ -98,3 +98,70 @@
       text-decoration: none;
       font-weight: bold;
     }
+  /* Responsive adjustments */
+
+@media (max-width: 1024px) {
+  .navbar-menu1 {
+    gap: 30px;
+    font-size: 16px;
+    left: 50%;
+  }
+
+  .form-box {
+    padding: 25px;
+    max-width: 420px;
+  }
+
+  .form-group input {
+    font-size: 15px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-menu1 {
+    position: static;
+    transform: none;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+
+  .container {
+    padding: 30px 10px;
+  }
+
+  .form-box {
+    max-width: 100%;
+    padding: 20px;
+    box-shadow: none;
+    border: none;
+  }
+
+  .register-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-menu1 {
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .register-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .register-link {
+    font-size: 13px;
+  }
+}
