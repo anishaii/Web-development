@@ -38,10 +38,6 @@ createUploadsFolder();
 app.use('/api/delivery', deliveryRouter);
 
 
-
-
-
-
 // ✅ Serve uploaded files statically
 app.use("/uploads", express.static("uploads"));
 
