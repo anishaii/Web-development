@@ -135,3 +135,19 @@
   height: auto;
   border-radius: 5px;
 }
+.admin-logout {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.logout-icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.logout-icon:hover {
+  transform: scale(1.1);
+}
+

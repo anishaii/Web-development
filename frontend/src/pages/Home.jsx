@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { assets } from '../assets/assets';
-import Swal from 'sweetalert2'; // 🚨 New Import
+import Swal from 'sweetalert2'; 
 import './Home.css';
 
 const Home = () => {
@@ -39,7 +39,7 @@ const Home = () => {
               setMenu("offer");
               Swal.fire({
                 title: 'Special Offers 🎉',
-                text: 'Exciting seasonal offers available now!',
+                text: 'Exciting Shrawan offers available now!',
                 icon: 'success',
                 confirmButtonColor: '#66c35c',
               });
@@ -53,7 +53,7 @@ const Home = () => {
               setMenu("contact");
               Swal.fire({
                 title: 'Contact Us 💬',
-                text: 'Reach out via email or chat — we\'re here to help!',
+                text: 'Reach out via email bloom@gmail.com or call us at 01-4152347',
                 icon: 'question',
                 confirmButtonColor: '#66c35c',
               });

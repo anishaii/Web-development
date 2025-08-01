@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 const { sequelize } = require("../Database/db");
-const User = require("./userSchema"); // adjust path if needed
-const Product = require("./productSchema"); // adjust path if needed
+const User = require("./userSchema"); 
+const Product = require("./productSchema"); 
 
 const Favorite = sequelize.define("Favorite", {
   id: {

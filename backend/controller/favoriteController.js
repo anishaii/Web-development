@@ -4,7 +4,6 @@ const Product = require("../model/productSchema");
 const addToFavorite = async (req, res) => {
   const userId = req.user.id; // from token middleware
   const { productId } = req.body;
-
   try {
     // Check if product exists
     const product = await Product.findByPk(productId);

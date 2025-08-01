@@ -1,5 +1,4 @@
 const Users = require("../model/userSchema");
-
 const getAllEmployee = async (req, res) => {
   console.log("Get Alls");
 
@@ -20,9 +19,7 @@ const getAllEmployee = async (req, res) => {
 };
 
 const saveAllEmployee = async (req, res) => {
-
   const { name, userId } = req.body;  // 
-
   try {
     const user = await Users.findOne({ where: { userId } });  
     if (user == null) {

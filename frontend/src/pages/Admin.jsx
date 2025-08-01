@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import './Admin.css';
 import { assets } from '../assets/assets';
@@ -10,6 +11,7 @@ const Admin = () => {
   const [image, setImage] = useState(null);
   const [products, setProducts] = useState([]);
   const [editId, setEditId] = useState(null);
+  const navigate = useNavigate();
 
   const fetchProducts = async () => {
     try {
@@ -79,6 +81,11 @@ const Admin = () => {
     setEditId(product.id);
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  };
+
   return (
     <div className="admin-container">
       <aside className="admin-sidebar">
@@ -102,7 +109,7 @@ const Admin = () => {
             type="file"
             accept="image/*"
             onChange={(e) => setImage(e.target.files[0])}
-            required={!editId} // required only when adding
+            required={!editId}
           />
 
           <label>Price</label>
@@ -151,9 +158,8 @@ const Admin = () => {
           <div className="admin-user">
             <div>
               <p className="admin-user-name">Admin</p>
-             
             </div>
-            <img src={assets.user}/>
+            <img src={assets.user} alt="Admin User" />
           </div>
         </header>
 
@@ -200,6 +206,16 @@ const Admin = () => {
             ))}
           </tbody>
         </table>
+
+        {/* Logout Icon */}
+        <div className="admin-logout">
+          <img
+            src={assets.logout}
+            alt="Logout"
+            className="logout-icon"
+            onClick={handleLogout}
+          />
+        </div>
       </main>
     </div>
   );

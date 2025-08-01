@@ -1,5 +1,4 @@
 const Product = require("../model/productSchema");
-
 // ADD PRODUCT
 const addProduct = async (req, res) => {
   try {
@@ -21,7 +20,6 @@ const addProduct = async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 };
-
 // GET ALL PRODUCTS
 const getAllProducts = async (req, res) => {
   try {
@@ -32,7 +30,6 @@ const getAllProducts = async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 };
-
 // DELETE PRODUCT
 const deleteProduct = async (req, res) => {
   try {
