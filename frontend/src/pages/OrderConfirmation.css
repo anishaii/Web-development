@@ -92,3 +92,62 @@
   font-style: italic;
   z-index: 1;
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .confirmation-box {
+    padding: 20px;
+    margin: 0 20px;
+  }
+
+  .confirmation-box p {
+    font-size: 14px;
+  }
+
+  .confirmation-btn {
+    padding: 6px 14px;
+    font-size: 14px;
+  }
+
+  .bloom-logo {
+    height: 60px;
+  }
+
+  .confirmation-icon {
+    width: 50px;
+  }
+
+  .footer-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .confirmation-box {
+    padding: 16px;
+    margin: 0 10px;
+  }
+
+  .confirmation-box p {
+    font-size: 13px;
+  }
+
+  .confirmation-btn {
+    padding: 5px 12px;
+    font-size: 13px;
+  }
+
+  .bloom-logo {
+    height: 50px;
+  }
+
+  .confirmation-icon {
+    width: 40px;
+  }
+
+  .footer-text {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 10px;
+  }
+}
+
